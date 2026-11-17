@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm, appetising QuickBite design tokens */
+  --background: #FAF8F5;
+  --foreground: #1A1D20;
+
+  --card: #FFFFFF;
+  --card-foreground: #1A1D20;
+  --card-elevated: #FFFFFF;
+
+  --primary: #E23744;
+  --primary-hover: #CB2A37;
+  --primary-active: #B7212D;
+  --primary-subtle: #FFF1F1;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #F3EFEA;
+  --secondary-hover: #E8E2D9;
+  --secondary-foreground: #2C2623;
+
+  --muted: #F1ECE5;
+  --muted-foreground: #6B7280;
+
+  --border: #E8E2D8;
+  --border-subtle: #F3EFE8;
+
+  --ring: #E23744;
+
+  /* Food specifics */
+  --veg: #16A34A;
+  --veg-subtle: #DCFCE7;
+  --veg-border: #22C55E;
+
+  --nonveg: #DC2626;
+  --nonveg-subtle: #FEE2E2;
+  --nonveg-border: #EF4444;
+
+  --warning: #D97706;
+  --warning-subtle: #FEF3C7;
+  --warning-foreground: #92400E;
+
+  --success: #15803D;
+  --success-subtle: #DCFCE7;
+  --success-foreground: #166534;
+
+  --danger: #DC2626;
+  --danger-subtle: #FEE2E2;
+  --danger-foreground: #991B1B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111215;
+    --foreground: #F3F4F6;
+
+    --card: #1A1C20;
+    --card-foreground: #F3F4F6;
+    --card-elevated: #23262E;
+
+    --primary: #FF525F;
+    --primary-hover: #E23744;
+    --primary-active: #CB2A37;
+    --primary-subtle: #2E1517;
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #23252C;
+    --secondary-hover: #2C2F38;
+    --secondary-foreground: #E5E7EB;
+
+    --muted: #22242B;
+    --muted-foreground: #9CA3AF;
+
+    --border: #2B2F38;
+    --border-subtle: #21242B;
+
+    --ring: #FF525F;
+
+    --veg: #22C55E;
+    --veg-subtle: #0B2C15;
+    --veg-border: #16A34A;
+
+    --nonveg: #EF4444;
+    --nonveg-subtle: #331113;
+    --nonveg-border: #DC2626;
+
+    --warning: #F59E0B;
+    --warning-subtle: #361F05;
+    --warning-foreground: #FCD34D;
+
+    --success: #22C55E;
+    --success-subtle: #0B2C15;
+    --success-foreground: #86EFAC;
+
+    --danger: #EF4444;
+    --danger-subtle: #331113;
+    --danger-foreground: #FCA5A5;
+  }
+}
+
+/* Explicit dark theme toggle class support */
+.dark, [data-theme="dark"] {
+  --background: #111215;
+  --foreground: #F3F4F6;
+
+  --card: #1A1C20;
+  --card-foreground: #F3F4F6;
+  --card-elevated: #23262E;
+
+  --primary: #FF525F;
+  --primary-hover: #E23744;
+  --primary-active: #CB2A37;
+  --primary-subtle: #2E1517;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #23252C;
+  --secondary-hover: #2C2F38;
+  --secondary-foreground: #E5E7EB;
+
+  --muted: #22242B;
+  --muted-foreground: #9CA3AF;
+
+  --border: #2B2F38;
+  --border-subtle: #21242B;
+
+  --ring: #FF525F;
+
+  --veg: #22C55E;
+  --veg-subtle: #0B2C15;
+  --veg-border: #16A34A;
+
+  --nonveg: #EF4444;
+  --nonveg-subtle: #331113;
+  --nonveg-border: #DC2626;
+
+  --warning: #F59E0B;
+  --warning-subtle: #361F05;
+  --warning-foreground: #FCD34D;
+
+  --success: #22C55E;
+  --success-subtle: #0B2C15;
+  --success-foreground: #86EFAC;
+
+  --danger: #EF4444;
+  --danger-subtle: #331113;
+  --danger-foreground: #FCA5A5;
+}
+
+/* Typography Scale */
+.type-display {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 2.75rem;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.type-h1 {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 2.125rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.type-h2 {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1.625rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.type-h3 {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.type-h4 {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.type-body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.type-small {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Respect Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
